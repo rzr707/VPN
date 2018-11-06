@@ -13,8 +13,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rzr707.vpnclient">
 
-    <uses-sdk android:minSdkVersion="14" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- For preventing android to fall into sleeping when VPN is running: -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
