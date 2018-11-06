@@ -1,7 +1,7 @@
 #ifndef VPN_SERVER_HPP
 #define VPN_SERVER_HPP
 
-#include "client_parameters.hpp"
+#include "ClientParameters.hpp"
 
 #include <mutex>
 #include <memory>
@@ -48,14 +48,7 @@ private:
      */
     void createNewConnection();
 
-    /**
-     * @brief SetDefaultSettings
-     * Set parameters if they were not set by
-     * user via terminal arguments on startup
-     * @param in_param - pointer on reference of parameter string to check
-     * @param type     - index of parameters
-     */
-    void setDefaultSettings(std::string *&in_param, const size_t& type);
+
 
     /**
      * @brief parseArguments method
@@ -65,27 +58,6 @@ private:
      * @param argv - arguments vector
      */
     void parseArguments(int argc, char **argv);
-
-    /**
-     * @brief VPNServer::correctSubmask checks netmask correctness
-     * @param submaskString
-     * @return true if submask is correct
-     */
-    bool correctSubmask(const std::string& submaskString);
-
-    /**
-     * @brief VPNServer::correctIp checks IPv4 address correctness
-     * @param ipAddr
-     * @return true if IPv4 address is correct
-     */
-    bool correctIp(const std::string& ipAddr);
-
-    /**
-     * @brief VPNServer::isNetIfaceExists checks existance of network interface
-     * @param iface - system network interface name, e.g. 'eth0'
-     * @return true if interface 'iface' exists
-     */
-    bool isNetIfaceExists(const std::string& iface);
 
     /**
      * @brief buildParameters
@@ -101,7 +73,7 @@ private:
      * @param name - tunnel interface name (e.g. "tun0")
      * @return descriptor of interface
      */
-    int get_interface(const char *name);
+    int getInterface(const char *name);
 
     /**
      * @brief get_tunnel
@@ -136,7 +108,6 @@ private:
     WOLFSSL_CTX*                   ctxPtr_;
 
     const int                      TIMEOUT_LIMIT_MS = 60000;
-    const unsigned                 DEFAULT_ARG_COUNT = 7;
 };
 
 #endif // VPN_SERVER_HPP

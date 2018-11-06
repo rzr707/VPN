@@ -1,0 +1,17 @@
+#ifndef UTILS_HPP
+#define UTILS_HPP
+
+#include <iostream>
+
+namespace utils {
+
+
+
+    class NetworkHelper {
+    public:
+        
+    };
+
+}
+
+#endif // !UTILS_HPP

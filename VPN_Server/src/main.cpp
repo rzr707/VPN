@@ -24,7 +24,7 @@
  * <h3>Enter 'exitvpn' in terminal to close the server.<h3><br>
  */
 
-#include "vpn_server.hpp"
+#include "VPNServer.hpp"
 #include <iostream>
 
 int main(int argc, char **argv) {

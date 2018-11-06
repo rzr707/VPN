@@ -11,6 +11,7 @@
  * such as IP, DNS etc. and will be sent to client.\r\n
  */
 struct ClientParameters {
+    std::string port;
     std::string mtu;
     std::string virtualNetworkIp;
     std::string networkMask;
@@ -18,7 +19,7 @@ struct ClientParameters {
     std::string routeIp;
     std::string routeMask;
     std::string physInterface;   // eth0, wlan0 etc..
-    char  parametersToSend[1024];
+    char        parametersToSend[1024];
 };
 
 #endif // CLIENT_PARAMETERS_HPP

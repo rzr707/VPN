@@ -1,5 +1,4 @@
-#include "ip_manager_test.hpp"
-#include "vpn_server_test.hpp"
+#include "IpManagerTest.hpp"
 
 int main(int argc, char *argv[]) {
     testing::InitGoogleTest(&argc, argv);

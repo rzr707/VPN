@@ -11,19 +11,23 @@ win32-msvc*{
 }
 
 SOURCES += src/main.cpp \
-    src/vpn_server.cpp \
-    src/tunnel_mgr.cpp \
-    src/ip_manager.cpp \
-    src/utils/utils.cpp \
-    src/tunnel.cpp
+    src/utils/Logger.cpp \
+    src/utils/NetworkHelper.cpp \
+    src/utils/ArgumentsParser.cpp \
+    src/IPManager.cpp \
+    src/TunnelManager.cpp \
+    src/Tunnel.cpp \
+    src/VPNServer.cpp
 
 HEADERS += \
-    src/ip_manager.hpp \
-    src/vpn_server.hpp \
-    src/client_parameters.hpp \
-    src/tunnel_mgr.hpp \
-    src/utils/utils.hpp \
-    src/tunnel.hpp
+    src/utils/NetworkHelper.hpp \
+    src/utils/Logger.hpp \
+    src/utils/ArgumentsParser.hpp \
+    src/ClientParameters.hpp \
+    src/IPManager.hpp \
+    src/Tunnel.hpp \
+    src/TunnelManager.hpp \
+    src/VPNServer.hpp
 
 LIBS += -lpthread \
         -lwolfssl \
