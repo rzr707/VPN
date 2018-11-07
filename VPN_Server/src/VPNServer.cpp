@@ -131,7 +131,7 @@ void VPNServer::createNewConnection() {
     std::unique_ptr<ClientParameters> cliParams(buildParameters(clientIpStr));
 
     // wait for a tunnel.
-    while ((tunnel = getTunnel(port_.c_str())).getTunDescriptor() != -1
+    while ((tunnel = getTunnel(cliParams_.port.c_str())).getTunDescriptor() != -1
            &&
            tunnel.getWolfSsl() != nullptr) {
 

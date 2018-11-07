@@ -102,7 +102,6 @@ private:
 private:
     ClientParameters               cliParams_;
     std::unique_ptr<IPManager>     manager_;
-    std::string                    port_;
     std::unique_ptr<TunnelManager> tunMgr_;
     std::recursive_mutex           mutex_;
     WOLFSSL_CTX*                   ctxPtr_;
